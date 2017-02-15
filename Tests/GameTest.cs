@@ -45,7 +45,7 @@ namespace RockPaperScissorAppTest
         {
 
             // Arrange
-            string userInput = "scissors";
+            string userInput = "rock";
             string computerMove = "paper";
             string winner = "computer";
             Game newGame = new Game();
