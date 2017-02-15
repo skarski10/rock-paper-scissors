@@ -33,6 +33,10 @@ namespace RockPaperScissorsApp.Objects
             {
                 return "user";
             }
+            else if (_userMove == _computerMove)
+            {
+                return "tie";
+            }
             else
             {
                 return "computer";
