@@ -46,15 +46,15 @@ namespace RockPaperScissorsApp.Objects
         {
             if (_winCombos[_userMove] == _computerMove)
             {
-                return "user";
+                return "You Win!";
             }
             else if (_userMove == _computerMove)
             {
-                return "tie";
+                return "Tie";
             }
             else
             {
-                return "computer";
+                return "Computer Wins!";
             }
         }
 

@@ -28,7 +28,7 @@ namespace RockPaperScissorAppTest
             // Arrange
             string userInput = "scissors";
             string computerMove = "paper";
-            string winner = "user";
+            string winner = "You Win!";
             Game newGame = new Game();
 
             // Act
@@ -47,7 +47,7 @@ namespace RockPaperScissorAppTest
             // Arrange
             string userInput = "rock";
             string computerMove = "paper";
-            string winner = "computer";
+            string winner = "Computer Wins!";
             Game newGame = new Game();
 
             // Act
@@ -66,7 +66,7 @@ namespace RockPaperScissorAppTest
             // Arrange
             string userInput = "rock";
             string computerMove = "rock";
-            string winner = "tie";
+            string winner = "Tie";
             Game newGame = new Game();
 
             // Act
@@ -102,6 +102,23 @@ namespace RockPaperScissorAppTest
             {
                 Console.WriteLine(moveScore);
             }
+        }
+
+        [Fact]
+        public void CompareMoves_FindOutcome_Final()
+        {
+
+            // Arrange
+            string userInput = "rock";
+            Game newGame = new Game();
+
+            // Act
+            newGame.SetUserMove(userInput);
+            newGame.SetRandomComputerMove();
+            string gameResult = newGame.CompareMoves();
+
+            // Assert
+            Console.WriteLine(gameResult);
         }
     }
 }
