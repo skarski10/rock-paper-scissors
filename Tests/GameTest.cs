@@ -77,5 +77,31 @@ namespace RockPaperScissorAppTest
             // Assert
             Assert.Equal(winner, gameResult);
         }
+
+        [Fact]
+        public void SetRandomComputerMove_GenerateRandomOption_NormalDistribution()
+        {
+
+            // Arrange
+            Game newGame = new Game();
+            Dictionary<string, int> _moveCounter = new Dictionary<string, int>{
+                {"rock", 0},
+                {"paper", 0},
+                {"scissors", 0}
+            };
+
+
+            // Act
+            for (int i = 0; i < 1000; i++)
+            {
+                newGame.SetRandomComputerMove();
+                _moveCounter[newGame.GetComputerMove()]++;
+            }
+            // Assert
+            foreach(KeyValuePair<string, int> moveScore in _moveCounter)
+            {
+                Console.WriteLine(moveScore);
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace RockPaperScissorsApp.Objects
 {
@@ -10,8 +11,18 @@ namespace RockPaperScissorsApp.Objects
             {"paper", "rock"},
             {"scissors", "paper"}
         };
+
+        private string[] computerMoveOptions = new string[] {"rock", "scissors", "paper"};
+
+        private Random _computerThinker;
+
         private string _userMove;
         private string _computerMove;
+
+        public Game()
+        {
+            _computerThinker = new Random();
+        }
 
         public void SetUserMove(string newUserMove)
         {
@@ -25,6 +36,10 @@ namespace RockPaperScissorsApp.Objects
         public void SetComputerMove(string newComputerMove)
         {
             _computerMove = newComputerMove;
+        }
+        public string GetComputerMove()
+        {
+            return _computerMove;
         }
 
         public string CompareMoves()
@@ -41,6 +56,12 @@ namespace RockPaperScissorsApp.Objects
             {
                 return "computer";
             }
+        }
+
+        public void SetRandomComputerMove()
+        {
+            int j = _computerThinker.Next(0, 3);
+            _computerMove = computerMoveOptions[j];
         }
     }
 }

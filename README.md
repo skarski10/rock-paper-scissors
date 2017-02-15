@@ -12,6 +12,10 @@ The program will take input and let user know if they lose. Fixed enemy value (r
 * **Input:** scissors
 * **Output:** Loser!
 
+The program will take input and let user know if they lose. Fixed enemy value (scissors)
+* **Input:** scissors
+* **Output:** Loser!
+
 The program will generate a random outcome for player 2
 * **Input:** N/A
 * **Output:** paper
