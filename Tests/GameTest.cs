@@ -59,22 +59,23 @@ namespace RockPaperScissorAppTest
             Assert.Equal(winner, gameResult);
         }
 
-        // [Fact]
-        // public void CompareMoves_FindOutcome_Tie()
-        // {
-        //
-        //     // Arrange
-        //     string userInput = "scissors";
-        //     string computerMove = "paper";
-        //     Game newGame = new Game();
-        //
-        //     // Act
-        //     newGame.SetUserMove(userInput);
-        //     newGame.SetComputerMove(computerMove);
-        //     bool winner = newGame.CheckWinner();
-        //
-        //     // Assert
-        //     Assert.Equal(true, winner);
-        // }
+        [Fact]
+        public void CompareMoves_FindOutcome_Tie()
+        {
+
+            // Arrange
+            string userInput = "rock";
+            string computerMove = "rock";
+            string winner = "tie";
+            Game newGame = new Game();
+
+            // Act
+            newGame.SetUserMove(userInput);
+            newGame.SetComputerMove(computerMove);
+            string gameResult = newGame.CompareMoves();
+
+            // Assert
+            Assert.Equal(winner, gameResult);
+        }
     }
 }
