@@ -27,15 +27,15 @@ namespace RockPaperScissorsApp.Objects
             _computerMove = newComputerMove;
         }
 
-        public bool CheckWinner()
+        public string CompareMoves()
         {
             if (_winCombos[_userMove] == _computerMove)
             {
-                return true;
+                return "user";
             }
             else
             {
-                return false;
+                return "computer";
             }
         }
     }
