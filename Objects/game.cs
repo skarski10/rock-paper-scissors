@@ -19,9 +19,11 @@ namespace RockPaperScissorsApp.Objects
         private string _userMove;
         private string _computerMove;
 
-        public Game()
+        public Game(string newUserMove)
         {
             _computerThinker = new Random();
+            _userMove = newUserMove;
+            SetRandomComputerMove();
         }
 
         public void SetUserMove(string newUserMove)

@@ -1,0 +1,36 @@
+@{
+    Layout = "Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <h3>Enter your move</h3>
+    <form id="game-options" action="/" method="post">
+        <select id="options" class="form-control" name="user-move">
+            <option value="bad" selected>...</option>
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+        </select>
+        <button type="submit" class="btn" id="form-submit">Enter</button>
+    </form>
+</div>
+
+@if(Model != null)
+{
+    <div class="row">
+    <div class="col-md-6">
+        <h2>Users Move</h2>
+        <h3>@Model.GetUserMove()</h3>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Computers Move</h2>
+        <h3>@Model.GetComputerMove()</h3>
+    </div>
+    </div>
+
+    <div class="row">
+    <h1>@Model.CompareMoves()</h1>
+    </div>
+
+}

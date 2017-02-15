@@ -12,7 +12,7 @@ namespace RockPaperScissorAppTest
         {
             // Arrange
             string userInput = "rock";
-            Game newGame = new Game();
+            Game newGame = new Game(userInput);
 
             // Act
             newGame.SetUserMove(userInput);
@@ -29,7 +29,7 @@ namespace RockPaperScissorAppTest
             string userInput = "scissors";
             string computerMove = "paper";
             string winner = "You Win!";
-            Game newGame = new Game();
+            Game newGame = new Game(userInput);
 
             // Act
             newGame.SetUserMove(userInput);
@@ -48,7 +48,7 @@ namespace RockPaperScissorAppTest
             string userInput = "rock";
             string computerMove = "paper";
             string winner = "Computer Wins!";
-            Game newGame = new Game();
+            Game newGame = new Game(userInput);
 
             // Act
             newGame.SetUserMove(userInput);
@@ -67,7 +67,7 @@ namespace RockPaperScissorAppTest
             string userInput = "rock";
             string computerMove = "rock";
             string winner = "Tie";
-            Game newGame = new Game();
+            Game newGame = new Game(userInput);
 
             // Act
             newGame.SetUserMove(userInput);
@@ -83,7 +83,8 @@ namespace RockPaperScissorAppTest
         {
 
             // Arrange
-            Game newGame = new Game();
+            string userInput = "rock";
+            Game newGame = new Game(userInput);
             Dictionary<string, int> _moveCounter = new Dictionary<string, int>{
                 {"rock", 0},
                 {"paper", 0},
@@ -110,7 +111,7 @@ namespace RockPaperScissorAppTest
 
             // Arrange
             string userInput = "rock";
-            Game newGame = new Game();
+            Game newGame = new Game(userInput);
 
             // Act
             newGame.SetUserMove(userInput);
